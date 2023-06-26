@@ -1,0 +1,3 @@
+[submodule "springboot-practice-resources"]
+	path = springboot-practice-resources
+	url = https://github.com/movingJin/springboot-practice-resources.git
