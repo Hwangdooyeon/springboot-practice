@@ -29,7 +29,7 @@ public class MemberController {
 
     @GetMapping("/register")
     public String createForm() {
-        return "member/createMemberform";
+        return "member/createMemberForm";
     }
 
     @PostMapping("/member/new")
