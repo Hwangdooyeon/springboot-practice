@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>로그인 페이지</title>
@@ -12,5 +12,14 @@
   <input type="password" name = "password"/>
   <button>로그인</button>
 </form>
+<script th:inline="javascript">
+
+    const message = [[ ${message} ]];
+
+    if (message){
+    alert(message);
+    }
+</script>
+
 </body>
 </html>

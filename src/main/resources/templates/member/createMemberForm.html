@@ -2,29 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <div class="container">
-    <form action="/member/new" method="post">
-        <div class="form-group">
+    <div class="form-group">
+        <form action="/member/new" method="post" onsubmit ="return ensureRegister();">
             <label for="name">e-mail</label>
-            <input type="text" id="email" name="email" placeholder="e-mail을 입력하세요.">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" placeholder="이름을 입력하세요.">
-            <label for="password">비밀번호</label>
-            <input type="password"id = "password" name="password">
-        </div>
-        <button type="submit">등록</button>
+        <input type="text" id="email" name="email" placeholder="e-mail을 입력하세요.">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요.">
+        <label for="password">비밀번호</label>
+        <input type="password"id = "password" name="password">
+    </div>
+    <button type="submit">등록</button>
     </form>
 </div> <!-- /container -->
 </body>
 <button onclick="test()">선택창(confirm) 발생</button>
 
 <script>
-    function test() {
-        if (!confirm("확인(예) 또는 취소(아니오)를 선택해주세요.")) {
-            alert("취소(아니오)를 누르셨습니다.");
-        } else {
-            alert("확인(예)을 누르셨습니다.");
+        function ensureRegister() {
+             return confirm("입력한 정보로 회원가입하시겠습니까??");
         }
-    }
 </script>
 </html>
 
