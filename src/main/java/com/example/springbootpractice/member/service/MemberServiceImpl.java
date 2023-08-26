@@ -13,19 +13,16 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public List<Member> findMembers() {
-
         return memberRepository.findAll();
     }
 
     @Override
     public Member getMemberByEmail(String email) {
-
         return memberRepository.findByEmail(email).orElse(null);
     }
 
     @Override
     public void join(Member member) {
-
         memberRepository.save(member);
     }
 }

@@ -5,7 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name="member",
@@ -36,6 +36,6 @@ public class Member {
 
     private String role;
 
-    }
+     }
 
 
